@@ -107,7 +107,7 @@ export default class DialogWrap extends React.Component<IDialogPropTypes, any> {
 
     const { visible } = this.props;
     if (IS_REACT_16 && (visible || this._component)) {
-      return (ReactDOM as any).createPortal(this.getComponent(visible), this.getContainer());
+      return this.getComponent(visible);
     }
     return (null as any);
   }
